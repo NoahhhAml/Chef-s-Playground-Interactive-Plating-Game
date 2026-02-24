@@ -39,9 +39,6 @@ Make sure the following files are in the **same folder**:
 
 Open terminal and run:
 
-```bash
-Main.py
-
 ## 🎮 How to Play
 
 - Split your screen:
@@ -61,24 +58,22 @@ Main.py
 - **Outer key** → Ingredient category  
 - **Inner key** → Ingredient name  
 - **Value** → Function that loads the image  
-
-This structure allows fast lookup and organized management of ingredients.
+- Allows fast lookup and organized structure.
 
 #### 📋 List
-- The `order` list stores randomly selected ingredients.
-- Used to compare player selections and calculate the final score.
+- `order` list stores randomly selected ingredients.
+- Used to compare player selections and calculate the score.
 
 #### 🔤 Strings
-Used for:
-- File paths (e.g., `"chicken.gif"`)
-- Player names
-- Leaderboard entries
+- Used for file paths (e.g., `"chicken.gif"`).
+- Player names.
+- Leaderboard entries.
 
 #### 🏆 Leaderboard Dictionary
 - **Key** → Player name  
 - **Value** → Highest recorded score  
-- Updates only if the new score is higher  
-- Sorted before displaying rankings  
+- Updates only if the new score is higher.  
+- Sorted before displaying rankings.
 
 ---
 
@@ -98,10 +93,10 @@ Used for:
 - Only the highest score per player is saved.
 
 ### 🧮 Score Calculation
-- Random order between **2–5 ingredients**
-- No duplicates
-- Score based on correctly selected ingredients
-- Displayed as a percentage
+- Random order between **2–5 ingredients**.
+- No duplicates.
+- Score based on correctly selected ingredients.
+- Displayed as a percentage.
 
 ---
 
@@ -121,7 +116,7 @@ This project helped me:
 - Strengthen problem-solving skills
 - Improve critical thinking
 - Apply programming concepts creatively
-- Move closer to my goal of becoming a software engineer
+- Move closer to my goal of becoming a software engineer.
 
 ---
 
@@ -158,6 +153,8 @@ This project helped me:
 
 ---
 
-## 👨‍🍳 Amirul Lutfy
+## 👨‍🍳 Author
 
-Final project for year 1 sem 1 combining creativity, programming fundamentals, and personal passion for food.
+Final project combining creativity, programming fundamentals, and personal passion for food.
+
+---
