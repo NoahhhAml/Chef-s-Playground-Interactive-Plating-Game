@@ -1,0 +1,5 @@
+Egg:Fried egg:friedEgg.gif
+Chicken:Drumstick:chicken.gif
+Garnish:Parsely:Parsley.gif
+Rice:White rice:whiteRice.gif
+Sauces:Black pepper:blackPepper.gif
