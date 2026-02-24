@@ -1,79 +1,150 @@
-# Chef-s-Playground-Interactive-Plating-Game
-Che’s Playground is an interactive cooking themed game build using python’s turtle graphic system  and multiple of standard libraries. The player is given a randomly generated “order” and must select  the correct ingredients
-What? Chef’s Playground: Interactive Plating Game 
-Che’s Playground is an interactive cooking themed game build using python’s turtle graphic system 
-and multiple of standard libraries. The player is given a randomly generated “order” and must select 
-the correct ingredients. Then, the player needs to drag the ingredient onto a drawn plate using the 
-mouse and place them with their own creativity before the confirmation. 
-The game includes several features: 
- A plate rendering interface by turtle and Ingredients loaded from a text file provided 
- Ingredient graphics is movable following the mouse cursor and placement confirmation 
-mimicking real game 
- Order generation and scoring with up-to date leaderboard system 
- Additional feature to add new ingredients to make the game more fun  
-3.  What motivated you to choose this project 
-I chose this project mainly because I wanted to create something that’s actually fun to look and 
-interactive instead of just another text-only program. I’ve learnt a lot of python basics in the lectures 
-with some additional self-learnt things like mouse tracking, input the image file and sort function for 
-the leaderboard and I felt like a good opportunity to put them together. On my personal side, I’ve 
-been recently learning cooking and plating for the past few months because I hope to open a small 
-café or restaurant in the future as side income. Thus, creating a food themed project is meaningful for 
-me and it’s not just something random comes from my mind. Throughout the project progression, I 
-realised it’s really cool if one day I could make a small interactive game for people who visit my café. 
-Finally, this project is a good way for me to build and practice thinking critically for my programming 
-skills and keep moving towards to my long-term goal of becoming software engineer. 
-4.  Brief user instructions 
- 
- 
-First of all, ensure all the files (ingredients.txt, leaderboard.txt, FinalProject.py and other .gif files) 
-must be in the same folder and directory. Open the terminal and run the game. Then, you’ll see 
-main menu (1. Play game 2. Add ingredients and 3. Exit). 
-If you choose 1, the first thing you need to do is to split the IDLE and turtle screen into two ¾ for 
-IDLE/ Visual code and ¼ for turtle. 
- 
-Read the rules and follow the terminal carefully, make sure you click on turtle screen before 
-placement confirmation for the ingredients.  
- 
-You can use “PizzaA.gif” to test the ingredient adding function and “Corriander.txt” and 
-“BoiledEgg.txt” to add new items in the available category. You can find any transparent or crop 
-images and convert them into GIF format before adding them in the program folder.  
-5.  How it works 
-Data structures 
-1.  Dictionary of dictionaries  
-The outer key represents the ingredients categories and inner keys represent the specific ingredient 
-names. The value is a function that loads the corresponding image which can be used by turtle for 
-displaying the ingredient. This allows quick look-up for ingredients by category and name and make it 
-easy to load images. 
-2. List 
-order is a list of ingredients randomly selected for each game using random.sample(). The list is used 
-to compare the player’s ingredients selection with the required order to calculate the score. 
-3. Strings 
-Strings was used for storing file paths, player names and others input and output such as “chicken.gif” 
-and Playername:Score% from “leaderboard.txt” 
-4. Leaderboard dictionary (scores) 
-The key is the player’s name and the value (Highest recorded score). This dictionary is to keep tracks 
-of player performance across multiple game sessions and it’s sorted to display ranked leaderboard. 
-Interesting / tricky / subtle aspects of the code meriting further explanation 
-1. Plate Boundary 
-The game uses mouse tracking to make ingredients follow the cursor smoothly. Each ingredient is 
-represented by a Turtle object that constantly move to the direction of the mouse in small steps. A 
-timer ensures continuous movement without freezing the program. Ingredients will stop when the 
-player press “c” on keyboard. I ensure ingredients are prevented from leaving the plate to make the 
-game seems more realistic. The program checks their distance from the plate’s centre and redirects 
-the cursor if they move too far. 
-2. File handling 
-The ingredients file stores each ingredient’s category’s name and image and there’s function to add 
-new ingredient during the gameplay. The leaderboard file tracks player names and scores. The file will 
-be updated if player achieve a higher score and there’s a sorting function to show the top player first. 
-3. Score calculation 
-The game will generate random order of ingredients ranging from 2 to 5 without repetition. 
-Ingredient’s images are loaded one by one smoothly only after the user input their choice. Scores are 
-then calculated based on how many ordered ingredients the player used. 
-6.  Particular challenges I overcame 
-At first, I planned to draw everything from scratch but to my disappointment, moving drawn object is 
-impossible after I finished 3 turtle drawings.  I decided to learn everything on Youtube and some others 
-python documentation to make my project look different than the usual I write during labs. The most 
-challenging parts from this project was making the ingredients move smoothly with the mouse 
-without lag and ensure the image only stay on the plate not anywhere else. Furthermore, managing 
-the leaderboard was really tricky because I had to ensure the scores updated correctly and only the  
-best score for each player was updated. 
+Chef’s Playground – Interactive Plating Game
+
+Chef’s Playground is an interactive cooking-themed game built using Python’s Turtle graphics system and multiple standard libraries. The player is given a randomly generated “order” and must select the correct ingredients. Then, the player drags the ingredients onto a drawn plate using the mouse and places them creatively before confirming.
+
+Features
+
+A plate rendering interface using Turtle graphics and ingredients loaded from a provided text file.
+
+Movable ingredient graphics that follow the mouse cursor with placement confirmation, mimicking a real game experience.
+
+Random order generation and scoring system with an up-to-date leaderboard.
+
+Additional feature allowing new ingredients to be added to make the game more fun.
+
+Motivation
+
+I chose this project mainly because I wanted to create something fun and interactive instead of just another text-only program.
+
+I have learned a lot of Python basics in lectures, along with additional self-learned topics such as:
+
+Mouse tracking
+
+Loading image files
+
+File handling
+
+Sorting functions for the leaderboard
+
+This project was a good opportunity to combine all of these skills.
+
+On a personal level, I have been learning cooking and plating for the past few months because I hope to open a small café or restaurant in the future as a side income. Creating a food-themed project makes this meaningful to me rather than just something random.
+
+Throughout the project development, I realised it would be really cool if one day I could create a small interactive game for customers visiting my café.
+
+Finally, this project helped me practice critical thinking and improve my programming skills as I work toward my long-term goal of becoming a software engineer.
+
+Brief User Instructions
+
+First, ensure all files (ingredients.txt, leaderboard.txt, FinalProject.py, and all .gif files) are in the same folder and directory.
+
+Open the terminal and run the game. You will see the main menu:
+
+Play Game
+
+Add Ingredients
+
+Exit
+
+If you choose Play Game, split your screen into:
+
+¾ for IDLE / Visual Studio Code
+
+¼ for the Turtle window
+
+Read the rules carefully in the terminal and follow the instructions. Make sure you click on the Turtle screen before confirming ingredient placement.
+
+You can use:
+
+PizzaA.gif to test the ingredient adding function
+
+Corriander.txt and BoiledEgg.txt to add new items
+
+You can also find transparent or cropped images, convert them into .gif format, and place them into the program folder before adding them.
+
+How It Works
+Data Structures
+1. Dictionary of Dictionaries
+
+The outer key represents ingredient categories.
+The inner keys represent specific ingredient names.
+The value is a function that loads the corresponding image for Turtle display.
+
+This allows quick lookup by category and ingredient name.
+
+2. List
+
+The order is a list of ingredients randomly selected for each game using random.sample().
+The list is used to compare the player’s selected ingredients with the required order to calculate the score.
+
+3. Strings
+
+Strings are used for:
+
+File paths (e.g., "chicken.gif")
+
+Player names
+
+Leaderboard entries (PlayerName:Score% from leaderboard.txt)
+
+4. Leaderboard Dictionary
+
+The key is the player’s name.
+The value is their highest recorded score.
+
+This dictionary tracks player performance across multiple sessions and is sorted to display a ranked leaderboard.
+
+Interesting / Tricky Aspects
+1. Plate Boundary System
+
+The game uses mouse tracking to make ingredients follow the cursor smoothly.
+
+Each ingredient is represented by a Turtle object.
+
+A timer ensures continuous movement without freezing the program.
+
+Ingredients stop moving when the player presses “C”.
+
+The program checks the distance from the plate’s center.
+
+If an ingredient moves too far, it is redirected back within the boundary.
+
+This prevents ingredients from leaving the plate and makes the game more realistic.
+
+2. File Handling
+
+ingredients.txt stores ingredient categories and image names.
+
+A function allows new ingredients to be added during gameplay.
+
+leaderboard.txt tracks player names and scores.
+
+Scores update only if a player achieves a higher score.
+
+A sorting function displays the top players first.
+
+3. Score Calculation
+
+The game generates a random order of 2–5 ingredients without repetition.
+
+Ingredient images are loaded one by one after user input.
+
+The score is calculated based on how many ordered ingredients the player selected correctly.
+
+Challenges Overcome
+
+Initially, I planned to draw everything from scratch using Turtle. However, I discovered that drawn objects cannot be moved after being completed.
+
+After creating three Turtle drawings, I decided to learn more from YouTube tutorials and Python documentation to improve the project.
+
+The most challenging parts were:
+
+Making ingredients move smoothly with the mouse without lag
+
+Ensuring ingredients stay within the plate boundary
+
+Managing the leaderboard correctly
+
+Updating only the highest score for each player
+
+Overcoming these challenges helped me improve my problem-solving and programming skills significantly.
